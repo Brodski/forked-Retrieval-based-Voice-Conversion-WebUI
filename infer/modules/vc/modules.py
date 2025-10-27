@@ -126,6 +126,10 @@ class VC:
         else:
             self.net_g = self.net_g.float()
 
+        print("----------------------")
+        print("WE INIT PIPELINE")
+        print("----------------------")
+
         self.pipeline = Pipeline(self.tgt_sr, self.config)
         n_spk = self.cpt["config"][-3]
         index = {"value": get_index_path_from_model(sid), "__type__": "update"}
@@ -142,6 +146,21 @@ class VC:
             if to_return_protect
             else {"visible": True, "maximum": n_spk, "__type__": "update"}
         )
+
+    def vc_single2( self, sid, input_audio_path, f0_up_key, f0_file, f0_method, file_index, file_index2, index_rate, filter_radius, resample_sr, rms_mix_rate, protect):
+        print("EAT IT")
+        print("EAT IT")
+        print("EAT IT")
+        print("EAT IT")
+        print("EAT IT")
+        print("EAT IT")
+        print("EAT IT")
+        print("EAT IT")
+        print("EAT IT")
+        print("EAT IT")
+        print("EAT IT")
+        return self.vc_single(sid, input_audio_path, f0_up_key, f0_file, f0_method, file_index, file_index2, index_rate, filter_radius, resample_sr, rms_mix_rate, protect)
+        # vc_single(self, sid, input_audio_path, f0_up_key, f0_file, f0_method, file_index, file_index2, index_rate, filter_radius, resample_sr, rms_mix_rate, protect)
 
     def vc_single(
         self,
@@ -214,6 +233,8 @@ class VC:
                 if os.path.exists(file_index)
                 else "Index not used."
             )
+            print("tgt_sr", tgt_sr)
+            print("audio_opt", audio_opt)
             return (
                 "Success.\n%s\nTime:\nnpy: %.2fs, f0: %.2fs, infer: %.2fs."
                 % (index_info, *times),
@@ -241,6 +262,11 @@ class VC:
         protect,
         format1,
     ):
+        print("####### VC MULTI ########")
+        print("####### VC MULTI ########")
+        print("####### VC MULTI ########")
+        print("####### VC MULTI ########")
+        print("####### VC MULTI ########")
         try:
             dir_path = (
                 dir_path.strip(" ").strip('"').strip("\n").strip('"').strip(" ")

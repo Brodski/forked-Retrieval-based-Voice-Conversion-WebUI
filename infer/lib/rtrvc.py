@@ -371,6 +371,10 @@ class RVC:
             feats = torch.cat((feats, feats[:, -1:, :]), 1)
         t2 = ttime()
         try:
+            if hasattr(self, "index"):
+                print("INDEX:", self.index_rate)
+            else:
+                print("NOOOOOOOOO INDEX!!!")
             if hasattr(self, "index") and self.index_rate != 0:
                 npy = feats[0][skip_head // 2 :].cpu().numpy().astype("float32")
                 score, ix = self.index.search(npy, k=8)

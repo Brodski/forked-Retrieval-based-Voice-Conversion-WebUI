@@ -75,7 +75,7 @@
     "本软件以MIT协议开源, 作者不对软件具备任何控制力, 使用软件者、传播软件导出的声音者自负全责. <br>如不认可该条款, 则不能使用或引用软件包内任何代码和文件. 详见根目录<b>LICENSE</b>.": "This software is open source under the MIT license. The author does not have any control over the software. Users who use the software and distribute the sounds exported by the software are solely responsible. <br>If you do not agree with this clause, you cannot use or reference any codes and files within the software package. See the root directory <b>Agreement-LICENSE.txt</b> for details.",
     "查看": "View",
     "查看模型信息(仅支持weights文件夹下提取的小模型文件)": "View model information (only supported for small model files extracted from the 'weights' folder)",
-    "检索特征占比": "Search feature ratio (controls accent strength, too high has artifacting):",
+    "检索特征占比": "index_rate: Search feature ratio (controls accent strength, too high has artifacting):",
     "模型": "Model",
     "模型推理": "Model Inference",
     "模型提取(输入logs文件夹下大文件模型路径),适用于训一半不想训了模型没有自动提取保存小文件模型,或者想测试中间模型的情况": "Model extraction (enter the path of the large file model under the 'logs' folder). This is useful if you want to stop training halfway and manually extract and save a small model file, or if you want to test an intermediate model:",

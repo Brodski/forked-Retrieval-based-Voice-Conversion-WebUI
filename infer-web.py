@@ -33,6 +33,16 @@ import shutil
 import logging
 
 
+
+################### BAM
+# put this very early (e.g., at the top of gui_v1.py before creating RVC/GUI)
+from torch.serialization import add_safe_globals
+from fairseq.data.dictionary import Dictionary
+
+# allowlist the Fairseq class used in the checkpoint
+add_safe_globals([Dictionary])
+
+
 logging.getLogger("numba").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
@@ -946,7 +956,7 @@ with gr.Blocks(title="RVC WebUI") as app:
                             )
 
                         but0.click(
-                            vc.vc_single,
+                            vc.vc_single2,
                             [
                                 spk_item,
                                 input_audio0,

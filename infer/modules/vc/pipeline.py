@@ -299,6 +299,7 @@ class Pipeline(object):
         protect,
         f0_file=None,
     ):
+        print("index_rate", index_rate)
         if (
             file_index != ""
             # and file_big_npy != ""
